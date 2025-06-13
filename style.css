@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #e0e5ec;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.login-container {
+  background: #e0e5ec;
+  padding: 3rem 2.5rem;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow:
+    8px 8px 15px #a3b1c6,
+    -8px -8px 15px #ffffff;
+  text-align: center;
+  animation: popIn 0.6s ease forwards;
+}
+
+h1 {
+  font-weight: 700;
+  color: #344055;
+  margin-bottom: 2rem;
+  letter-spacing: 1.2px;
+}
+
+select, input, button {
+  width: 100%;
+  padding: 14px 18px;
+  margin-top: 18px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow:
+    inset 6px 6px 8px #bec8d2,
+    inset -6px -6px 8px #ffffff;
+  outline: none;
+  background: #e0e5ec;
+  color: #344055;
+  font-weight: 600;
+}
+
+select:hover, input:hover {
+  box-shadow:
+    inset 8px 8px 10px #a3b1c6,
+    inset -8px -8px 10px #ffffff;
+}
+
+select:focus, input:focus {
+  box-shadow:
+    inset 2px 2px 6px #7a8ba6,
+    inset -2px -2px 6px #ffffff;
+  color: #2c3e50;
+}
+
+button {
+  background: #5d8aa8;
+  color: #f0f4f8;
+  font-weight: 700;
+  box-shadow:
+    5px 5px 15px #4a6b8b,
+    -5px -5px 15px #6ea1d0;
+  cursor: pointer;
+  letter-spacing: 1.1px;
+}
+
+button:hover {
+  background: #49739c;
+  box-shadow:
+    7px 7px 20px #3b5b7a,
+    -7px -7px 20px #5b8ac9;
+}
+
+#loginStatus {
+  margin-top: 20px;
+  font-weight: 700;
+  color: #e74c3c;
+  letter-spacing: 0.8px;
+  min-height: 1.5em;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  select, input, button {
+    padding: 12px 14px;
+    font-size: 1rem;
+  }
+}
